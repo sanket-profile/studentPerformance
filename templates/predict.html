@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Information Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    .container {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .form-container {
+        width: 60%;
+        padding-right: 20px;
+    }
+    .output-container {
+        width: 40%;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"], select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    #output {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    #output p {
+        margin-bottom: 10px;
+    }
+    #output strong {
+        font-weight: bold;
+        color: #333;
+    }
+    #output .number {
+        font-size: 24px;
+        color: #007bff; /* Blue color for numbers */
+        font-weight: bold;
+    }
+    .highlight {
+        font-weight: bold;
+        color: #007bff; /* Blue color for highlights */
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <h2>Student Information Form</h2>
+        <form action="{{url_for('predict')}}" method="post" id="studentForm">
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="race_ethnicity">Race/Ethnicity:</label>
+                <select id="race_ethnicity" name="race_ethnicity" required>
+                    <option value="">Select race/ethnicity</option>
+                    <option value="group A">Group A</option>
+                    <option value="group B">Group B</option>
+                    <option value="group C">Group C</option>
+                    <option value="group D">Group D</option>
+                    <option value="group E">Group E</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="parental_level_of_education">Parental Level of Education:</label>
+                <select id="parental_level_of_education" name="parental_level_of_education" required>
+                    <option value="">Select parental level of education</option>
+                    <option value="some college">Some College</option>
+                    <option value="associate's degree">Associate's Degree</option>
+                    <option value="high school">High School</option>
+                    <option value="some high school">Some High School</option>
+                    <option value="bachelor's degree">Bachelor's Degree</option>
+                    <option value="master's degree">Master's Degree</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="lunch">Lunch:</label>
+                <select id="lunch" name="lunch" required>
+                    <option value="">Select lunch type</option>
+                    <option value="standard">Standard</option>
+                    <option value="free/reduced">Free/Reduced</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="test_preparation_course">Test Preparation Course:</label>
+                <select id="test_preparation_course" name="test_preparation_course" required>
+                    <option value="">Select test preparation course</option>
+                    <option value="none">None</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="reading_score">Reading Score:</label>
+                <input type="number" id="reading_score" name="reading_score" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="writing_score">Writing Score:</label>
+                <input type="number" id="writing_score" name="writing_score" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    
+    <div class="output-container">
+        <h2>Model Output</h2>
+        <div id="output">
+            {{results}}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
