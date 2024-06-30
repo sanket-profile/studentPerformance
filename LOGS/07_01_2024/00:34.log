@@ -1,0 +1,8 @@
+[ 2024-07-01 00:34:37,553  14 COMPONENTS - INFO - loading preprocessor pickle file]
+[ 2024-07-01 00:34:37,962  18 COMPONENTS - INFO - Loaded the preprocessor pickle file]
+[ 2024-07-01 00:34:37,964  19 COMPONENTS - INFO - Fitting preprocessor on input X]
+[ 2024-07-01 00:34:37,966  24 COMPONENTS - INFO - Fitted the preprocessor on X]
+[ 2024-07-01 00:34:37,966  25 COMPONENTS - INFO - Loading Model pickle file]
+[ 2024-07-01 00:34:38,048  29 COMPONENTS - INFO - Loaded the model pickle file]
+[ 2024-07-01 00:34:38,048  30 COMPONENTS - INFO - Predicting using Model]
+[ 2024-07-01 00:34:38,049  34 COMPONENTS - INFO - Prediction done. Prediction is - [76.6411448]]

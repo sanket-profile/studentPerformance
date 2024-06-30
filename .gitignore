@@ -1,6 +1,5 @@
 .venv
 venv/
-LOGS/
 studentPerformance.egg-info/
 __pycache__/
 .DS_Store

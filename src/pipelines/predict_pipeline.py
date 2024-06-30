@@ -41,7 +41,3 @@ class predictData():
         except Exception as e:
             raise CustomException("Something is wrong in prediction pipeline")
         
-
-if __name__ == "__main__":
-    predict_data = predictData()
-    print(predict_data.predict(["female","group C","associate's degree","standard","none",86,84]))

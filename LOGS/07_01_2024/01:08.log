@@ -1,0 +1,3 @@
+[ 2024-07-01 01:08:42,181  97 werkzeug - WARNING -  * Debugger is active!]
+[ 2024-07-01 01:08:42,186  97 werkzeug - INFO -  * Debugger PIN: 275-805-923]
+[ 2024-07-01 01:09:57,988  97 werkzeug - INFO -  * Detected change in '/Users/sanketsaxena/Desktop/studentPerformance/application.py', reloading]
